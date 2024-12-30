@@ -43,8 +43,8 @@ model.fit(x_train, y_train)
 y_pred = model.predict(x_test)
 
 # Calculate the accuracy
-accuracy = accuracy_score(y_test, y_pred)
-print(f'ACCURACY OF THE DECISION TREE MODEL : {accuracy * 100:.2f}%')
+accuracy = accuracy_score(y_test, y_pred) * 100
+print('ACCURACY OF THE DECISION TREE MODEL : {:.2f}%'.format(accuracy))
 
 # Logistic Regression
 model_log = LogisticRegression(max_iter=200, random_state=42)
